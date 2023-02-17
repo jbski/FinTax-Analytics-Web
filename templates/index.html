@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/style.css">
+    
+    <title>Document</title>
+</head>
+<body>   
+    <!-- <div class="navbar sticky-top navbar-light bg-light nav-container"> -->
+    <div class="navbar sticky-top main-nav-container">
+        <nav class="navbar sticky-top nav-container">
+            <a href="{{url_for('index')}}" class="logo"></a>
+            <ul class="nav-links" >
+                <li><a href="{{url_for('index')}}"><ion-icon name="home-sharp" style="padding: 0px 8px 0px 0px"></ion-icon>Home</a></li>
+                <li><a href="{{url_for('about')}}">About</a></li>
+                <li><a href="#" onclick="myServices(); return false;">Services</a></li>
+                <li><a href="{{url_for('get_started')}}"><ion-icon name="lock-closed-sharp"></ion-icon> Sign In</a></li>            
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </div>
+   {% block content %}  
+   <div class="main-container">
+        <div class="jumbotron-container"> 
+                <div class="action-call-container">      
+                    <div class="action-call">
+                        <p>Remotely File Your Taxes</p>
+                        <p>With a CPA</p>
+                        <div class="btn-primary"><a href="{{url_for('get_started')}}">Get Started</a></div>
+                    </div>
+                </div>
+                
+                <!-- Add bootstrap slider code here -->                
+                <div id="carouselExampleInterval" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <!-- <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button> -->
+                  </div>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="5000">
+                      <img src="../static/img/Office_viz_800_600_background.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                      <img src="../static/img/Tax1040_800_600_background.png" class="d-block w-100" alt="...">
+                    </div>
+                    <!-- <div class="carousel-item">
+                      <img src="..." class="d-block w-100" alt="...">
+                    </div> -->
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+                <!-- Bootstrap slider code ends here -->
+        </div>  
+        
+        <div id="client-steps-header">
+            <!-- <p>Streamlined Tax Prep Made Easy!</p> -->
+
+            <p>Easily file your tax return with a professional!</p>
+        </div>
+
+        <section id="client-steps">
+            <div class="next-steps">
+                <div class="next">
+                    <div class="tax-process">  
+                        <div class="btn-process">Step 1</div>                      
+                        <h1>Create an Account</h1>                        
+                        <p>Get started by creating an account. Returning clients can simply sign in.</p>                    
+                    </div>    
+                    <div class="tax-process">
+                        <div class="btn-process">Step 2</div>
+                        <h1>Upload Your Docs</h1>                        
+                        <p>Upload your documents to our secure platform, which utilizes encryption technology to keep your documents private and secure. </p>  
+                    </div> 
+                    <div class="tax-process">
+                        <div class="btn-process">Step 3</div>
+                        <h1>Communicate</h1>                        
+                        <p>Ask questions along the way. We are available via secure chat, email or phone to keep the process moving along and ensure your return is prepared accuratley. Our goal is for you to receive the max refund allowed under the current tax law.</p>  
+                    </div>
+                    <div class="tax-process">
+                        <div class="btn-process">DONE!</div>
+                        <h1>Review and Sign</h1>                        
+                        <p>Sign your tax return online after a final review via web conference or phone call</p>  
+                    </div>
+                </div>
+            </div>       
+        </section>
+
+        <section class="linebreak">
+            <div id="linebreak-filler">
+                <!-- <h1>hello</h1> -->
+            </div>
+            <div id="pricing-header">
+                <h3>Simplified pricing</h3>
+            </div>
+            <div id="instructions-text">
+                <p>The pricing structure for tax return services has been outlined in the options below. These pricing schedules remove the guesswork and outline what a typical return will cost our clients. <br><br> If you're unsure which option is best for you, we've got you covered. We will review your documents and your answers to a brief questionaire provided during onboarding to determine the correct filing status.</p>
+            </div>            
+        </section>    
+
+        <div class="services-container">
+            <div class="services">
+                <h1 id="services-header"></h1>
+                <div class="service-item-container">
+                    <div class="service-items" id="svc1">
+                        <p id="svc-item1-hdr">1040</p>
+                        <p>Typical Federal 1040 Return</p>
+                        <p>W2/1099-R, -INT, -DIV income only</p>
+                        <p>No Itemized Deductions</p>
+                        <p>Includes 1 State Return</p>
+                        <div class="price">$225</div>
+                        <a href="{{url_for('get_started')}}" class="btn-select">Select</a>
+                    </div>
+                    <div class="service-items" id="svc2">
+                        <p id="svc-item1-hdr">1040 Schedule A</p>
+                        <p>Typical Federal 1040 Return</p>
+                        <p>W2/1099-R, -INT, -DIV income only</p>
+                        <p>Includes Itemized Deductions</p>
+                        <p>Includes 1 State Return</p>
+                        <div class="price">$325</div>
+                        <a href="{{url_for('get_started')}}" class="btn-select">Select</a>
+
+                    </div>
+                    <div class="service-items" id="svc3">
+                        <p id="svc-item1-hdr">1040 Schedule C</p>
+                        <p>Typical Federal 1040 Return</p>
+                        <p>W2/1099-R, -INT, -DIV income, Business income</p>
+                        <p>Includes Itemized Deductions</p>
+                        <p>Includes 1 State Return</p>
+                        <div class="price">$400</div>
+                        <a href="{{url_for('get_started')}}" class="btn-select">Select</a>  
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        
+       
+    
+</div>
+
+
+<section id="contact-us">
+    <div class="contact">
+        <div class="contact-email">
+            <!-- <form action="action_page.php"> -->
+            <form >
+                <div class="contact-container">
+                  <h3>Contact Us</h3>
+                  <!-- <p>Lorem ipsum..</p> -->
+                </div>
+              
+                <div class="contact-container" style="background-color:#f4f4f4">
+                  <input type="text" placeholder="Name" name="name" required>
+                  <input type="text" placeholder="Email address" name="mail" required>
+                  <input type="text" placeholder="Phone" name="mail" required>
+                  <textarea name="comment" id="comment" cols="30" rows="5"></textarea>
+                  <!-- <label>
+                    <input type="checkbox" checked="checked" name="contact"> Daily Newsletter
+                  </label> -->
+                </div>
+              
+                <div class="contact-container">
+                  <input type="submit" onclick="mycontact()" value="contact" >
+                </div>
+              </form>
+        </div>
+    </div>
+
+</section>
+{% endblock %}
+
+
+    <!-- <div class="spacer_2"></div>  -->
+    <div class="footer-container">
+        <div class="footer">
+            <div id="footer1"></div>
+            <div id="footer2">info@fintaxanalytics.com</div>
+            <div id="footer3">Phone: 661-309-6283</div>            
+        </div>        
+    </div>
+    
+    
+   
+
+   
+   
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+   <script type="text/javascript" src="../static/js/app.js"></script>
+   
+</body>
+
+
+</html>

@@ -1,0 +1,53 @@
+{% extends "index.html" %}
+
+{% block content %} 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="about-container">
+        <div class="about">
+            <h1 id="about-header">About</h1>
+            <div id="about-text">
+            <p>FinTax Analytics is a virtual accounting firm run by CPA's and EA's (Enrolled Agents).  The mission of FinTax Analytics is to provide quality tax prep services primarily focusing on individuals. <br> <br> By bringing the tax prep function online we have been able to streamline the entire tax prep process and can avoid wasting precious time transporting documents through busy rush hour traffic.  Our client portal streamlines the exchange of documents between client and preparer making it easier to reference your important documents at any time. <br><br>  Our clients can rest easy knowing their data is secure using encryption technology from end to end.  Our CPA's and EA's are also trained and up to date on the latest tax laws from the IRS ensuring your taxes are done right and you receive the maximum refund possible under the latest tax law.</p>
+            </div>
+        </div>
+    </div> 
+
+    <section>
+        <div class="subscribe">
+            <div class="subscribe-email">
+                <!-- <form action="action_page.php"> -->
+                <form >
+                    <div class="subscribe-container">
+                      <h3>Subscribe to our Newsletter</h3>
+                      <!-- <p>Lorem ipsum..</p> -->
+                    </div>
+                  
+                    <div class="subscribe-container" style="background-color:#f4f4f4">
+                      <input type="text" placeholder="Name" name="name" required>
+                      <input type="text" placeholder="Email address" name="mail" required>
+                      <!-- <label>
+                        <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+                      </label> -->
+                    </div>
+                  
+                    <div class="subscribe-container">
+                      <input type="submit" onclick="mySubscribe()" value="Subscribe" >
+                    </div>
+                  </form>
+            </div>
+        </div>
+    
+</body>
+</html>
+
+{% endblock %} 
